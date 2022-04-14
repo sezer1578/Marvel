@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.ozaltun.marvel.R
-import com.ozaltun.marvel.adapter.ComicsAdapter
+import com.ozaltun.marvel.adapter.CharactersDetailAdapter
 import com.ozaltun.marvel.databinding.FragmentCharacterDetailsBinding
 import com.ozaltun.marvel.model.comics.Comic
 import com.ozaltun.marvel.viewmodel.CharacterDetailsViewModel
@@ -27,53 +27,44 @@ class CharacterDetailsFragment : Fragment() {
         findNavController()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentCharacterDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val(uri,description,name) = getDetailsWithSafeArgs()
+        setupViews(uri,description,name)
 
-        val (uri, description, name) = getDetailsWithSafeArgs()
-        setupViews(uri, description, name)
-
-        viewModel.comics.observe(viewLifecycleOwner) { comicList ->
-            populateRecyclerView(comicList)
+        viewModel.comics.observe(viewLifecycleOwner){ comicList ->
+            setRecyclerView(comicList)
         }
         viewModel.getComicsByCharacterId(args.character.id)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        navController.popBackStack(R.id.allCharactersFragment, false)
-        return super.onOptionsItemSelected(item)
-    }
-
-    private fun getDetailsWithSafeArgs(): Triple<String, String, String> {
+    private fun getDetailsWithSafeArgs() : Triple<String,String,String> {
         val uri = args.character.thumbnail.path + "." + args.character.thumbnail.extension
         val description = args.character.description
         val name = args.character.name
-        return Triple(uri, description, name)
-    }
+        return  Triple(uri,description,name)
 
-    private fun setupViews(uri: String, description: String, name: String) {
+    }
+    private fun setupViews(uri:String,description:String,name:String){
         binding.apply {
-            Glide.with(this@CharacterDetailsFragment).load(uri).into(detailsCharacterThumbImageView)
-            detailsCharacterNameTextView.text = name
+            Glide.with(this@CharacterDetailsFragment).load(uri).into(detailsCharacterImageView)
+            detailsCharacterNameTxt.text = name
             if (description.isEmpty()) {
-                detailsCharacterDescriptionTextView.text = getString(R.string.character_unknown, name)
-            } else {
-                detailsCharacterDescriptionTextView.text = description
+                detailsCharacterDescriptionTxtView.text = getString(R.string.character_unknown,name)
+            }else {
+                detailsCharacterDescriptionTxtView.text = description
             }
         }
     }
-
-    private fun populateRecyclerView(comicList: List<Comic>) {
-        binding.detailsCharacterRecyclerView.apply {
-            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            adapter = ComicsAdapter(comicList)
+    private fun setRecyclerView(comicList: List<Comic>){
+        binding.detailRecyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+            adapter = CharactersDetailAdapter(comicList)
         }
     }
+
 }

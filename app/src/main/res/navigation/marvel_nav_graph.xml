@@ -23,18 +23,5 @@
             android:name="character"
             app:argType="com.ozaltun.marvel.model.character.Character"
             app:nullable="false" />
-        <action
-            android:id="@+id/action_characterDetailsFragment_to_comicsFragment"
-            app:destination="@id/comicsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/comicsFragment"
-        android:name="com.ozaltun.marvel.view.ComicsFragment"
-        android:label="@string/comics_title_action_bar"
-        tools:layout="@layout/fragment_comics">
-        <argument
-            android:name="character"
-            app:argType="com.ozaltun.marvel.model.character.Character"
-            app:nullable="false" />
     </fragment>
 </navigation>

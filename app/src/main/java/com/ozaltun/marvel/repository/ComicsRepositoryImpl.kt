@@ -7,8 +7,7 @@ import com.ozaltun.marvel.resource.parseResponse
 import java.lang.Exception
 
 class ComicsRepositoryImpl(
-    private val service: MarvelService
-): ComicsRepository {
+    private val service: MarvelService): ComicsRepository {
     override suspend fun getComicsByCharacterId(characterId: Int): List<Comic> {
         return when (val result = service.getComicsByCharacterId(characterId).parseResponse()) {
             is Output.Success -> {

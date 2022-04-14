@@ -35,6 +35,6 @@ class CharacterPagingSource(private val apiService: MarvelService): PagingSource
     }
 
     companion object {
-        private const val LIMIT = 20
+        private const val LIMIT = 30
     }
 }
