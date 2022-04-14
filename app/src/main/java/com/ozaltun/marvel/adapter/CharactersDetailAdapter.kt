@@ -21,7 +21,8 @@ class CharactersDetailAdapter(private val characterList: List<Comic>): RecyclerV
         with(holder.binding){
             val uri = characterDetail.thumbnail.path+"."+characterDetail.thumbnail.extension
             Glide.with(comicimageView).load(uri).into(comicimageView)
-            comicDateTxtView.text = characterDetail.dates.toString()
+            
+            comicTxtView.text = characterDetail.title
         }
     }
 

@@ -1,7 +1,8 @@
 package com.ozaltun.marvel.resource
 
-import com.ozaltun.marvel.BuildConfig
+import com.ozaltun.marvel.constant.Constant
 import com.ozaltun.marvel.extensions.md5
+import com.ozaltun.marvel.BuildConfig
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -11,7 +12,7 @@ class MarvelRetrofit {
 
     companion object {
         private lateinit var retrofit: Retrofit
-        private const val BASE_URL = "http://gateway.marvel.com/v1/public/"
+        private const val BASE_URL = Constant.BASE_URL
 
         private fun getRetrofitInstance(): Retrofit {
 

@@ -1,26 +1,19 @@
 <resources>
     <string name="app_name">Marvel</string>
     <string name="character_image_contentDesc">Character image</string>
-    <string name="character_unknown">There\'s no information about %1$s</string>
+    <string name="character_unknown">There is no information</string>
     <string name="no_results">No results , please check your internet connection</string>
-    <string name="divisor_content_description">Divisor to videos</string>
-    <string name="splash_marvel_logo_content_desc">Marvel logo</string>
 
-    <!-- Comics Fragment -->
-    <string name="details_comics_text_button">COMICS</string>
+    <string name="characters_title_action_bar">Marvel Universe</string>
+    <string name="details_title_action_bar">Details and Comics</string>
 
-    <!-- MotionLayout Scenes -->
-    <string name="comic_text_button_start">COMICS</string>
-    <string name="comic_text_button_end">DESCRIPTION</string>
+    <string name="madeBySezer">Made by Sezer Özaltun</string>
+    <string name="linkedin">Linkedin: sezerozaltunn</string>
+    <string name="github">Github: sezer1578</string>
+    
+    <string name="exitApp">Exit App</string>
+    <string name="exitQuestiom">Do you want to exit the app ?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
 
-    <!-- AlertDialog -->
-    <string name="alert_dialog_title_text">No videos found</string>
-    <string name="alert_dialog_message_text">Do you want to go back or retry the videos search?</string>
-    <string name="alert_dialog_empty_list_close_text">Close</string>
-    <string name="alert_dialog_empty_list_retry_text">Retry</string>
-
-    <!-- ActionBar Labels -->
-    <string name="characters_title_action_bar">Marvel</string>
-    <string name="details_title_action_bar">Details</string>
-    <string name="comics_title_action_bar">Comics</string>
 </resources>

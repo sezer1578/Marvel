@@ -62,7 +62,7 @@ class CharacterDetailsFragment : Fragment() {
     }
     private fun setRecyclerView(comicList: List<Comic>){
         binding.detailRecyclerView.apply {
-            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
             adapter = CharactersDetailAdapter(comicList)
         }
     }

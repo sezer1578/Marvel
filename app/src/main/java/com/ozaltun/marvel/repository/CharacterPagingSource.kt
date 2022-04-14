@@ -2,6 +2,7 @@ package com.ozaltun.marvel.repository
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.ozaltun.marvel.constant.Constant
 import com.ozaltun.marvel.api.MarvelService
 
 class CharacterPagingSource(private val apiService: MarvelService): PagingSource<Int, com.ozaltun.marvel.model.character.Character>() {
@@ -35,6 +36,6 @@ class CharacterPagingSource(private val apiService: MarvelService): PagingSource
     }
 
     companion object {
-        private const val LIMIT = 30
+        private const val LIMIT = Constant.LIMIT
     }
 }

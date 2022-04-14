@@ -18,7 +18,6 @@ import com.ozaltun.marvel.viewmodel.AllCharactersViewModel
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.navigation.findNavController
-import com.ozaltun.marvel.extensions.navigateWithAnimations
 
 class AllCharactersFragment : Fragment() {
 
@@ -51,7 +50,7 @@ class AllCharactersFragment : Fragment() {
             allCharactersAdapter = AllCharactersAdapter() { character ->
                 val directions = AllCharactersFragmentDirections
                     .actionAllCharactersFragmentToCharacterDetailsFragment(character)
-                findNavController().navigateWithAnimations(directions)
+                findNavController().navigate(directions)
             }
             adapter = allCharactersAdapter
 
