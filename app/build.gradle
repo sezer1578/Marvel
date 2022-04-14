@@ -63,19 +63,19 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:3.6.0"
 
     // Koin Dependencies
-    implementation "io.insert-koin:koin-core:3.1.6"
-    testImplementation "io.insert-koin:koin-test:3.1.6"
-    implementation "io.insert-koin:koin-android:3.1.6"
+    implementation "io.insert-koin:koin-core:3.1.4"
+    testImplementation "io.insert-koin:koin-test:3.1.4"
+    implementation "io.insert-koin:koin-android:3.1.5"
     // Java Compatibility
-    implementation "io.insert-koin:koin-android-compat:3.1.6"
+    implementation "io.insert-koin:koin-android-compat:3.1.5"
 // Jetpack WorkManager
-    implementation "io.insert-koin:koin-androidx-workmanager:3.1.6"
+    implementation "io.insert-koin:koin-androidx-workmanager:3.1.4"
 // Navigation Graph
     implementation "io.insert-koin:koin-androidx-navigation:3.1.6"
 // Jetpack Compose
     implementation "io.insert-koin:koin-androidx-compose:3.1.6"
     // Koin for Ktor
-    implementation "io.insert-koin:koin-ktor:3.1.6"
+    implementation "io.insert-koin:koin-ktor:3.1.4"
 // SLF4J Logger
     implementation "io.insert-koin:koin-logger-slf4j:3.1.6"
     implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
