@@ -5,18 +5,29 @@
  
 # Used Technologies
 ### Architecture
-+ MVVV
++ MVVV (Model - View - viewBinding - ViewModel)
 
 ### Dependency Injection
 + Koin
 
-#### Http Request
+### REST APIs
 + Retrofit
-+ +okHttp
-### Other
++ okHttp
++ Gson
+
+### Others
 + Navigation Components
 + Kotlin Coroutines
 + Paging3
 + Glide
 + Fragment
- 
+
+# ScreenShot
+
+![MervelGitub 001](https://user-images.githubusercontent.com/26059113/163564471-8108b050-d410-4a8f-86f4-bf4ffb7bbba2.jpeg)
+
+
+## Video
+
+https://user-images.githubusercontent.com/26059113/163567896-d167c121-ba2d-4348-bf3e-9a1b5c4362ec.mov
+
