@@ -5,7 +5,7 @@
  
 # Used Technologies
 ### Architecture
-+ MVVV (Model - View - viewBinding - ViewModel)
++ MVVM (Model - View - viewBinding - ViewModel)
 
 ### Dependency Injection
 + Koin
