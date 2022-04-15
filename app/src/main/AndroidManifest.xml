@@ -14,10 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Marvel"
         android:usesCleartextTraffic="true">
-
-      <activity android:name=".NavigationActivity">
-
-      </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">

@@ -8,7 +8,7 @@ plugins {
 android {
     compileSdk 31
 
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 
@@ -58,46 +58,37 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
 
-    // Retrofit Dependencies
+    // Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.okhttp3:logging-interceptor:3.6.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
 
-    // Koin Dependencies
+    // Koin
     implementation "io.insert-koin:koin-core:3.1.4"
     testImplementation "io.insert-koin:koin-test:3.1.4"
     implementation "io.insert-koin:koin-android:3.1.5"
+
     // Java Compatibility
     implementation "io.insert-koin:koin-android-compat:3.1.5"
-// Jetpack WorkManager
-    implementation "io.insert-koin:koin-androidx-workmanager:3.1.4"
-// Navigation Graph
+
+    // Navigation Graph
     implementation "io.insert-koin:koin-androidx-navigation:3.1.6"
-// Jetpack Compose
-    implementation "io.insert-koin:koin-androidx-compose:3.1.6"
+
     // Koin for Ktor
     implementation "io.insert-koin:koin-ktor:3.1.4"
-// SLF4J Logger
-    implementation "io.insert-koin:koin-logger-slf4j:3.1.6"
-    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
-    // Moshi Dependencies
+
+    // Moshi
     implementation "com.squareup.moshi:moshi:1.8.0"
     implementation "com.squareup.moshi:moshi-kotlin:1.8.0"
 
-    // Lifecycle Dependencies
+    // Lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
 
 
-    // Paging3 Dependency
+    // Paging3
     implementation "androidx.paging:paging-runtime-ktx:3.1.1"
 
-    // Glide Dependency
+    // Glide
     implementation "com.github.bumptech.glide:glide:4.12.0"
-
-
-    // Lottie Dependency
-    implementation "com.airbnb.android:lottie:3.4.0"
-
-    //DataStore Dependency
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
 }

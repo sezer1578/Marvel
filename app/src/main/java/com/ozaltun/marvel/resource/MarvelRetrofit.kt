@@ -5,7 +5,7 @@ import com.ozaltun.marvel.extensions.md5
 import com.ozaltun.marvel.BuildConfig
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
 
 class MarvelRetrofit {
@@ -33,7 +33,7 @@ class MarvelRetrofit {
                 retrofit = Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .client(httpClient.build())
-                    .addConverterFactory(MoshiConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create())
                     .build()
             }
             return retrofit

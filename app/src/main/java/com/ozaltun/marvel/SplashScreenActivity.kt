@@ -18,7 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.splashScreen.animate().setDuration(2000).alpha(1f).withEndAction{
-            val intent = Intent(this, NavigationActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             startActivity(intent)
             finish()
